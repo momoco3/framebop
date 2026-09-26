@@ -1,0 +1,134 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.field {
+  min-width: 0;
+}
+
+.fieldLabel {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 6px;
+  font-weight: 900;
+  font-size: 0.9rem;
+}
+
+.fieldHint {
+  font-weight: 600;
+  font-size: 0.78rem;
+  color: var(--text-soft);
+}
+
+.twoColumns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.swatch,
+.colorPicker {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: var(--line-thin);
+  border-radius: 12px;
+}
+
+.swatch[aria-pressed='true'] {
+  box-shadow: 0 0 0 3px var(--paper), 0 0 0 5px var(--ink);
+}
+
+.colorPicker {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  background: conic-gradient(var(--cyan), var(--sky), var(--purple), var(--pink), var(--orange), var(--yellow), var(--lime), var(--cyan));
+}
+
+.colorPicker:focus-within {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+
+.colorPicker input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 8px;
+  margin: 4px 0 0;
+}
+
+.stat {
+  padding: 8px 12px;
+  background: #f3f6fb;
+  border: var(--line-thin);
+  border-radius: var(--radius-s);
+}
+
+.stat dt {
+  font-size: 0.74rem;
+  font-weight: 800;
+  color: var(--text-soft);
+}
+
+.stat dd {
+  margin: 0;
+  font-weight: 900;
+  font-variant-numeric: tabular-nums;
+}
+
+.statHighlight {
+  background: var(--yellow);
+}
+
+.statHighlight dt {
+  color: var(--ink);
+}
+
+.warning {
+  margin: 0;
+  padding: 10px 12px;
+  font-weight: 800;
+  font-size: 0.86rem;
+  background: #ffe3f1;
+  border: var(--line-thin);
+  border-radius: var(--radius-s);
+}
+
+.note {
+  margin: 6px 0 0;
+  font-size: 0.78rem;
+  color: var(--text-soft);
+}
+
+@media (max-width: 560px) {
+  .twoColumns {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 360px) {
+  .stats {
+    grid-template-columns: 1fr 1fr;
+  }
+}

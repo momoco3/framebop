@@ -1,0 +1,118 @@
+.zone {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 210px;
+  padding: 26px 16px;
+  text-align: center;
+  background:
+    radial-gradient(circle at 12% 20%, rgba(25, 224, 238, 0.16) 0 60px, transparent 61px),
+    radial-gradient(circle at 88% 80%, rgba(255, 79, 174, 0.14) 0 70px, transparent 71px),
+    var(--paper);
+  border: 3px dashed var(--ink);
+  border-radius: var(--radius-l);
+  transition:
+    background-color 0.15s,
+    transform 0.15s;
+}
+
+.compact {
+  flex-direction: row;
+  flex-wrap: wrap;
+  min-height: 0;
+  padding: 14px 16px;
+  gap: 10px 14px;
+}
+
+.dragging {
+  background: rgba(244, 255, 58, 0.55);
+  transform: scale(1.01);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 56px;
+  padding: 8px 22px 8px 10px;
+  font-weight: 900;
+  font-size: 1.1rem;
+  background: var(--sky);
+  border: var(--line);
+  border-radius: 999px;
+  box-shadow: var(--shadow-s);
+  transition: transform 0.12s, box-shadow 0.12s;
+}
+
+.button:hover:not(:disabled) {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0 var(--ink);
+}
+
+.button:active:not(:disabled) {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0 var(--ink);
+}
+
+.compact .button {
+  min-height: 48px;
+  font-size: 1rem;
+}
+
+.plus {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  background: var(--paper);
+  border: var(--line-thin);
+  border-radius: 50%;
+}
+
+.compact .plus {
+  width: 32px;
+  height: 32px;
+}
+
+.buttonText {
+  white-space: nowrap;
+}
+
+.hint {
+  margin: 0;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--text-soft);
+}
+
+.decoStar,
+.decoSparkle {
+  position: absolute;
+  pointer-events: none;
+}
+
+.decoStar {
+  top: 14px;
+  right: 18px;
+  transform: rotate(12deg);
+}
+
+.decoSparkle {
+  bottom: 16px;
+  left: 18px;
+}
+
+.compact .decoStar,
+.compact .decoSparkle {
+  display: none;
+}
+
+/* タッチ操作の端末ではドラッグ＆ドロップの案内を隠す */
+@media (hover: none) {
+  .desktopOnly {
+    display: none;
+  }
+}
