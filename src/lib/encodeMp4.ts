@@ -67,9 +67,10 @@ export async function encodeMp4(
     videoFrame.close();
     timestampUs += durationUs;
 
-    // エンコーダーが詰まりすぎないよう少し待つ
+    // エンコーダーが詰まりすぎないよう、処理が進むのを待つ
+    // （タイマーで待つと、タブが裏にあるとき極端に遅くなるため dequeue イベントを使う）
     while (encoder.encodeQueueSize > 4) {
-      await new Promise((resolve) => setTimeout(resolve, 5));
+      await waitForDequeue(encoder);
     }
     onProgress((i + 1) / steps.length);
   }
@@ -79,6 +80,13 @@ export async function encodeMp4(
   if (encodeError) throw encodeError;
   muxer.finalize();
   return new Blob([muxer.target.buffer], { type: 'video/mp4' });
+}
+
+function waitForDequeue(encoder: VideoEncoder) {
+  return new Promise<void>((resolve) => {
+    if ('ondequeue' in encoder) encoder.addEventListener('dequeue', () => resolve(), { once: true });
+    else setTimeout(resolve, 5);
+  });
 }
 
 /** 画像サイズに合う H.264 の設定を、対応しているものから選びます */
