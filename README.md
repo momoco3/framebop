@@ -8,8 +8,16 @@
 > 🔒 **Uploaded images are processed locally in your browser and are not uploaded to a server.**
 > 読み込んだ画像はすべてお使いのブラウザの中だけで処理され、サーバーには一切送信されません。
 
-<!-- スクリーンショットは docs/ フォルダに置いてください（docs/README.md 参照） -->
-<!-- ![FrameBop screenshot](docs/screenshot.png) -->
+<table>
+  <tr>
+    <td width="70%"><img src="docs/screenshot.png" alt="FrameBop のPC画面"></td>
+    <td width="30%"><img src="docs/screenshot-mobile.png" alt="FrameBop のスマホ画面"></td>
+  </tr>
+  <tr>
+    <td align="center">PC</td>
+    <td align="center">スマホ（下に Generate ボタンが固定）</td>
+  </tr>
+</table>
 
 ---
 
@@ -141,7 +149,7 @@ framebop/
 ├─ index.html                  … ページの入り口（タイトルなど）
 ├─ vite.config.ts              … ビルド設定
 ├─ public/favicon.svg          … タブのアイコン
-├─ docs/                       … README 用スクリーンショット置き場
+├─ docs/                       … README 用スクリーンショット（差し替え方は docs/README.md）
 ├─ .github/workflows/deploy.yml … GitHub Pages 自動公開
 └─ src/
    ├─ main.tsx                 … アプリの起動

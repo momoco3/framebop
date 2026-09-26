@@ -1,6 +1,6 @@
 # docs
 
-スクリーンショットをここに置いてください。
+README に表示しているスクリーンショットです。同じファイル名で上書きすると差し替えられます。
 
-- `docs/screenshot.png` … README の先頭に表示されるメイン画像（推奨: 横 1600px 程度）
-- `docs/screenshot-mobile.png` … スマホ表示の画像（推奨: 横 750px 程度）
+- `screenshot.png` … PC 画面（横 1600px）
+- `screenshot-mobile.png` … スマホ画面（横 780px）
