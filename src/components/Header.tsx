@@ -7,8 +7,8 @@ export function Header() {
       <div className={styles.logoWrap}>
         <StarIcon className={styles.star} size={30} />
         <h1 className={styles.logo}>
-          <span className={styles.logoFrame}>Frame</span>
-          <span className={styles.logoBop}>Bop</span>
+          <span className={styles.logoFrame}>ももみくじ</span>
+          <span className={styles.logoBop}>GIFメーカー</span>
         </h1>
         <BoltIcon className={styles.bolt} size={30} color="var(--pink)" />
       </div>

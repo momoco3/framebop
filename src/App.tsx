@@ -256,7 +256,7 @@ export default function App() {
             <br />
             画像はすべてお使いのブラウザ内で処理されます。
           </p>
-          <p className={styles.footerSmall}>FrameBop · MIT License</p>
+          <p className={styles.footerSmall}>ももみくじGIFメーカー · MIT License</p>
         </footer>
       </div>
 

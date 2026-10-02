@@ -1,4 +1,4 @@
-# FrameBop
+# ももみくじGIFメーカー
 
 **Make GIF animations from your images — right in your browser.**
 画像を並べるだけで GIF アニメが作れる、スマホ対応のブラウザツールです。
@@ -10,8 +10,8 @@
 
 <table>
   <tr>
-    <td width="70%"><img src="docs/screenshot.png" alt="FrameBop のPC画面"></td>
-    <td width="30%"><img src="docs/screenshot-mobile.png" alt="FrameBop のスマホ画面"></td>
+    <td width="70%"><img src="docs/screenshot.png" alt="ももみくじGIFメーカー のPC画面"></td>
+    <td width="30%"><img src="docs/screenshot-mobile.png" alt="ももみくじGIFメーカー のスマホ画面"></td>
   </tr>
   <tr>
     <td align="center">PC</td>
@@ -236,4 +236,4 @@ framebop/
 
 [MIT License](./LICENSE)
 
-`LICENSE` の `Copyright (c) 2026 FrameBop contributors` は、公開時にご自身の名前などに書き換えて構いません。
+`LICENSE` の `Copyright (c) 2026 ももみくじGIFメーカー contributors` は、公開時にご自身の名前などに書き換えて構いません。
